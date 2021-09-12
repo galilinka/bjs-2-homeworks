@@ -1,15 +1,17 @@
-function compareArrays(arr1, arr2) {
-  let result;
+"use strict";
 
-  // Ваш код
+//Задача 1
 
-  return result; // boolean
-}
+const compareArrays = (arr1, arr2) => 
+arr1.length === arr2.length && arr1.every((n, i) => n === arr2[i]);
+
+
+//Задача 2
 
 function advancedFilter(arr) {
-  let resultArr;
-
-  // Ваш код
-
-  return resultArr; // array
-}
+  
+  console.log(
+    arr.filter(item => item > 0).filter(item => item % 3 === 0).map(item => item*10)
+  )
+  
+  }
