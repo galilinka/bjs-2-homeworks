@@ -4,8 +4,6 @@ function Student(name, gender, age) {
   this.name = name;
   this.gender = gender;
   this.age = age;
-  this.marks = [];
-  this.average = 0;
 }
 
 let student1 = new Student("Tony", "male", 37);
@@ -18,6 +16,7 @@ Student.prototype.setSubject = function (subjectName) {
 }
 
 Student.prototype.addMark = function (mark) {
+  this.marks = [];
   if(this.marks !== undefined){
     this.marks.push(mark);
   }
@@ -39,7 +38,7 @@ Student.prototype.getAverage = function () {
   for (let i = 0; i < this.marks.length; i++){
     sum += this.marks[i];
   }
-  this.average =  sum/this.marks.length;
+  return sum/this.marks.length;
 }
 
 Student.prototype.exclude = function (reason) {
