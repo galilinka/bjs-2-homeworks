@@ -16,12 +16,10 @@ Student.prototype.setSubject = function (subjectName) {
 }
 
 Student.prototype.addMark = function (mark) {
-  this.marks = [];
-  if(this.marks !== undefined){
-    this.marks.push(mark);
-  }
+  if(this.marks === undefined){ 
+    this.marks = [];
+    }
 }
-
 
 Student.prototype.addMarks = function (...marks) {
   if(this.marks === undefined){ 
@@ -46,5 +44,7 @@ Student.prototype.exclude = function (reason) {
   delete this.subject; 
   delete this.marks; 
 }
+
+
 
 
