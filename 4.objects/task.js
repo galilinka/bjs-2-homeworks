@@ -18,7 +18,8 @@ Student.prototype.setSubject = function (subjectName) {
 Student.prototype.addMark = function (mark) {
   if(this.marks === undefined){ 
     this.marks = [];
-    }
+  }
+    this.marks.push(mark);
 }
 
 Student.prototype.addMarks = function (...marks) {
@@ -44,6 +45,14 @@ Student.prototype.exclude = function (reason) {
   delete this.subject; 
   delete this.marks; 
 }
+
+// let student1 = new Student("Tony", "male", 37);
+// student1.setSubject("Algebra");
+// student1.addMark(5);
+// student1.addMark(4);
+// student1.addMark(5);
+// console.log(student1.getAverage()); //4.6666
+// console.log(student1);
 
 
 
